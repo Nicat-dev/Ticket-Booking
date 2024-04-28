@@ -55,6 +55,9 @@ public enum Errors implements ErrorResponse {
             HttpStatus.UNAUTHORIZED),
     EMAIL_NOT_FOUND("email_not_found",
             "User with email {email} not found",
+            HttpStatus.NOT_FOUND),
+    EVENT_NOT_FOUND("event_not_found",
+            "Event not found id{id} not found",
             HttpStatus.NOT_FOUND);
 
     private final String key;
