@@ -43,15 +43,16 @@ public class EventServiceImpl implements EventService {
 
     @Override
     public void deleteById(Long id) {
-        repository.delete(getById(id));
+        repository.delete(find(id));
     }
 
     @Override
     public EventDto get(Long id) {
-        return mapper.entityToDto(getById(id));
+        return mapper.entityToDto(find(id));
     }
 
-    private Event getById(Long id){
+    @Override
+    public Event find(Long id) {
         return repository.findById(id)
                 .orElseThrow(()-> new ApplicationException(Errors.EVENT_NOT_FOUND));
     }

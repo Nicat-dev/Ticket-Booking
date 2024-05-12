@@ -58,6 +58,9 @@ public enum Errors implements ErrorResponse {
             HttpStatus.NOT_FOUND),
     EVENT_NOT_FOUND("event_not_found",
             "Event not found id{id} not found",
+            HttpStatus.NOT_FOUND),
+    TICKET_NOT_FOUND("ticket_not_found",
+            "Ticket not found id{id} not found",
             HttpStatus.NOT_FOUND);
 
     private final String key;
